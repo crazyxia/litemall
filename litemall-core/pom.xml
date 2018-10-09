@@ -71,6 +71,10 @@
             <groupId>org.linlinjava</groupId>
             <artifactId>litemall-db</artifactId>
         </dependency>
+
+
+
+
     </dependencies>
 
 </project>
