@@ -50,6 +50,7 @@ public class AdminTokenManager {
         userToken.setUpdateTime(update);
         userToken.setExpireTime(expire);
         userToken.setUserId(id);
+
         tokenMap.put(token, userToken);
         idMap.put(id, userToken);
 

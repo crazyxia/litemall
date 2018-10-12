@@ -7,13 +7,18 @@ import org.linlinjava.litemall.core.util.bcrypt.BCryptPasswordEncoder;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.time.LocalDateTime;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class BcryptTest {
 
     @Test
-    public void test() {
-        String rawPassword = "aaaaaa";
+    /**
+     * 生成password
+     */
+    public void createPassword() {
+        String rawPassword = "admin123";
         String encodedPassword ="";
         BCryptPasswordEncoder bCryptPasswordEncoder =  new BCryptPasswordEncoder();
         encodedPassword = bCryptPasswordEncoder.encode(rawPassword);
@@ -22,4 +27,8 @@ public class BcryptTest {
 
         Assert.assertTrue(bCryptPasswordEncoder.matches(rawPassword, encodedPassword));
     }
+
+
+
+
 }

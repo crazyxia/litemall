@@ -80,6 +80,7 @@ public class BCryptPasswordEncoder {
     }
 
     public boolean matches(CharSequence rawPassword, String encodedPassword) {
+        logger.info("----------------------------");
         if (encodedPassword == null || encodedPassword.length() == 0) {
             logger.warn("Empty encoded password");
             return false;

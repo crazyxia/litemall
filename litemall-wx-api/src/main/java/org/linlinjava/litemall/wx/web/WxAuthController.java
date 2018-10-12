@@ -87,9 +87,11 @@ public class WxAuthController {
         }
 
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        /*
+        TODO
         if (!encoder.matches(password, user.getPassword())) {
             return ResponseUtil.fail(403, "账号密码不对");
-        }
+        }*/
 
         // userInfo
         UserInfo userInfo = new UserInfo();
